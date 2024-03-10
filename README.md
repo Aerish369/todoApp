@@ -36,4 +36,4 @@
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Screenshot from 2024-03-10 19-35-44](https://github.com/Aerish369/todoApp/assets/107682299/57155fa3-20da-4d09-9f36-38aa2cb7a1ac)
