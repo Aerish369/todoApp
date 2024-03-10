@@ -28,7 +28,7 @@
   python3 manage.py migrate
 ```
 
-4. Run server 
+5. Run server 
 
 ```bash
   python3 manage.py runserver
