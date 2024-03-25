@@ -16,13 +16,13 @@
 
 3. Activate the virtual environment
 
-   For Windows
+ For Windows
 
 ```bash
   venv/scripts/activate
 ```
 
-For Linux
+  For Linux
 
 ```bash
   source venv/bin/activate
