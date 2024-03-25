@@ -1,6 +1,4 @@
-
 # Basic Todo List web app
-
 
 ## Getting Started
 
@@ -9,11 +7,25 @@
 ```bash
   git clone https://github.com/Aerish369/todoApp
 ```
-    
+
 2. Setup a virtual environment
 
 ```bash
   python -m venv venv
+```
+
+3. Activate the virtual environment
+
+   For Windows
+
+```bash
+  venv/scripts/activate
+```
+
+For Linux
+
+```bash
+  source venv/bin/activate
 ```
 
 3. Install required packages
@@ -28,7 +40,7 @@
   python3 manage.py migrate
 ```
 
-5. Run server 
+5. Run server
 
 ```bash
   python3 manage.py runserver
@@ -36,4 +48,22 @@
 
 ## Screenshots
 
-![Screenshot from 2024-03-10 19-35-44](https://github.com/Aerish369/todoApp/assets/107682299/57155fa3-20da-4d09-9f36-38aa2cb7a1ac)
+## Home page
+
+![Screenshot 2024-03-25 133206](https://github.com/Aerish369/todoApp/assets/107682299/2c9aded7-6cca-4bf1-b6de-4a4772030c8d)
+
+## Update Task Page
+
+![image](https://github.com/Aerish369/todoApp/assets/107682299/187bf189-3dc3-4e88-86bc-00ce86f45107)
+
+## Profile Page
+
+![image](https://github.com/Aerish369/todoApp/assets/107682299/e1c0ab7f-5c22-4e85-8899-1c7fb6c41023)
+
+## Login Page
+
+![image](https://github.com/Aerish369/todoApp/assets/107682299/8897abe5-c26f-43e6-9eeb-9faca7333a91)
+
+## SignUp Page
+
+![image](https://github.com/Aerish369/todoApp/assets/107682299/1b2310ba-eabc-4b45-8a5a-22b3436a269a)
