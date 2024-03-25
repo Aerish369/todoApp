@@ -16,13 +16,13 @@
 
 3. Activate the virtual environment
 
- For Windows
+For Windows
 
 ```bash
   venv/scripts/activate
 ```
 
-  For Linux
+For Linux
 
 ```bash
   source venv/bin/activate
@@ -37,18 +37,19 @@
 4. Migrate database
 
 ```bash
-  python3 manage.py migrate
+  python manage.py migrate
 ```
 
 5. Run server
 
 ```bash
-  python3 manage.py runserver
+  python manage.py runserver
 ```
 
 ## Screenshots
 
 ## Database
+
 ![Screenshot from 2024-03-25 11-00-56](https://github.com/Aerish369/todoApp/assets/107682299/750738f2-8eea-44a6-b868-0ebf04a31e9d)
 
 ## Home page
@@ -58,6 +59,10 @@
 ## Update Task Page
 
 ![image](https://github.com/Aerish369/todoApp/assets/107682299/187bf189-3dc3-4e88-86bc-00ce86f45107)
+
+## Delete Task Page
+
+![image](https://github.com/Aerish369/todoApp/assets/107682299/7b088043-5b4e-41c8-a2ba-d85a8087bc8e)
 
 ## Profile Page
 
