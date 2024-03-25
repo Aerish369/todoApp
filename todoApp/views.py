@@ -1,17 +1,21 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from .models import Task
 from .forms import TaskForm
 # Create your views here.
 
-
+@login_required(login_url='user-login')
 def tasks(request):
-    tasks = Task.objects.all()
+    profile = request.user.profile
+    tasks = profile.task_set.all()
     form = TaskForm()
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
-            form.save()
+            task = form.save(commit=False)
+            task.owner = profile
+            task.save()
             return redirect('tasks')
     context = { 
         'tasks': tasks,
@@ -20,8 +24,10 @@ def tasks(request):
     return render(request, 'todoApp/tasks.html', context)
 
 
+@login_required(login_url='user-login')
 def viewTask(request, pk):
-    tasks = Task.objects.get(id=pk)
+    profile = request.user.profile
+    tasks = profile.task_set.get(id=pk)
     context = {
         'tasks':tasks
     }
@@ -29,8 +35,10 @@ def viewTask(request, pk):
 
 
 
+@login_required(login_url='user-login')
 def updateTasks(request, pk):
-    tasks = Task.objects.get(id=pk)
+    profile = request.user.profile
+    tasks = profile.task_set.get(id=pk)
     form = TaskForm(instance=tasks)
     if request.method == 'POST':
         form = TaskForm(request.POST, instance=tasks)
@@ -44,8 +52,10 @@ def updateTasks(request, pk):
     return render(request, 'todoApp/form.html', context)
  
 
+@login_required(login_url='user-login')
 def deleteTasks(request, pk):
-    tasks = Task.objects.get(id=pk)
+    profile = request.user.profile
+    tasks = profile.task_set.get(id=pk)
     if request.method == 'POST':
         tasks.delete()
         return redirect('tasks')

@@ -5,8 +5,19 @@
 
 <style>
 
-	body{
-		background-color: #638CB8;
+	body::after{
+		
+		/* .auth::after { */
+  		z-index: -1;
+  		opacity: 0.1;
+  		content: '';
+  		display: block;
+  		position: fixed;
+  		top: 0;
+  		left: 0;
+  		bottom: 0;
+  		right: 0;
+  		background: url(static/images/pattern.jpg);
 	}
 
 	input{
@@ -61,21 +72,21 @@
 		
 	<div class="todo-list">
 
-    {% for task in tasks %}
+    	{% for task in tasks%}
 
-        <div class="item-row">
-            {% if task.completed%}
-            <span><strike>{{task}}</strike> </span>
-            <a href="{% url 'update-tasks' task.id %}" class="btn btn-sm btn-info">Update</a> 
-            <a href="{% url 'delete-tasks' task.id %}" class="btn btn-sm btn-danger">Delete</a>  
-            {% else %}
-            <span>{{task}}</span>
-            <a href="{% url 'update-tasks' task.id %}" class="btn btn-sm btn-info">Update</a> 
-            <a href="{% url 'delete-tasks' task.id %}" class="btn btn-sm btn-danger">Delete</a>  
-            {% endif %}
-        </div>
+        	<div class="item-row">
+            	{% if task.completed%}
+            	<span><strike>{{task}}</strike> </span>
+            	<a href="{% url 'update-tasks' task.id %}" class="btn btn-sm btn-info">Update</a> 
+            	<a href="{% url 'delete-tasks' task.id %}" class="btn btn-sm btn-danger">Delete</a>  
+            	{% else %}
+            	<span>{{task}}</span>
+            	<a href="{% url 'update-tasks' task.id %}" class="btn btn-sm btn-info">Update</a> 
+            	<a href="{% url 'delete-tasks' task.id %}" class="btn btn-sm btn-danger">Delete</a>  
+            	{% endif %}
+        	</div>
             
-    {% endfor %}
+    	{% endfor %}
 	</div>
 </div>
 

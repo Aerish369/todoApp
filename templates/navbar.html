@@ -1,0 +1,51 @@
+
+{% load static %}
+<header class="header" style="background-color: #ffffff; padding: 20px 0;">
+  <div class="container container--narrow" style="max-width: 960px; margin: 0 auto; padding: 0 20px;">
+    <a href="{% url 'tasks' %}" class="header__logo" style="text-decoration: none;">
+      <!-- <img src="{% static 'list.png' %}" alt="Todo App" style="width: 150px; height: auto;"> -->
+      <img src="{% static 'to-do.png' %}" alt="Todo App" style="width: 50px; height: auto;">
+    </a>
+    <nav class="header__nav" style="display: flex; align-items: center;">
+      <input type="checkbox" id="responsive-menu" style="display: none;">
+      <label for="responsive-menu" class="toggle-menu" style="cursor: pointer;">
+        
+        <div class="toggle-menu__lines" style="width: 25px; height: 3px; background-color: #000000; margin-top: 4px;"></div>
+      </label>
+      <ul class="header__menu" style="display: flex; list-style: none; margin-left: auto;">
+
+        
+        
+        {% if request.user.is_authenticated %}
+        <li class="header__menuItem" style="margin-left: 20px;">
+          <a href="{% url 'tasks' %}" 
+          style="text-decoration: none; color: #000000; font-size: 16px;">
+          My Tasks</a>
+        </li>
+        
+        <li class="header__menuItem" style="margin-left: 20px;">
+          <a href="{% url 'my-account' %}" 
+          style="text-decoration: none; color: #000000; font-size: 16px;">
+          My Account</a>
+        </li>
+
+        <li class="header__menuItem" style="margin-left: 20px;">
+          <a href="{% url 'user-logout' %}" class="btn" 
+          style="text-decoration: none; padding: 8px 16px; border-radius: 4px; background-color: #007bff; color: #ffffff;">
+          Logout</a>
+        </li>
+
+        {% else %}
+        
+        <li class="header__menuItem" style="margin-left: 20px;">
+          <a href="{% url 'user-login' %}" class="btn" 
+          style="text-decoration: none; padding: 8px 16px; border-radius: 4px; background-color: #007bff; color: #ffffff;">
+          Login/Sign Up</a>
+        </li>
+
+        {% endif %}
+      
+    </ul>
+    </nav>
+  </div>
+</header>
