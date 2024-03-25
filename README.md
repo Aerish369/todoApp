@@ -48,6 +48,9 @@
 
 ## Screenshots
 
+## Database
+![Screenshot from 2024-03-25 11-00-56](https://github.com/Aerish369/todoApp/assets/107682299/750738f2-8eea-44a6-b868-0ebf04a31e9d)
+
 ## Home page
 
 ![Screenshot 2024-03-25 133206](https://github.com/Aerish369/todoApp/assets/107682299/2c9aded7-6cca-4bf1-b6de-4a4772030c8d)
