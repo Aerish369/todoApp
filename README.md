@@ -37,6 +37,7 @@ For Linux
 4. Migrate database
 
 ```bash
+  python manage.py makemigrations
   python manage.py migrate
 ```
 
